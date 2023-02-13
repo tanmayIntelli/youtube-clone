@@ -1,38 +1,127 @@
-.App {
-  text-align: center;
+.header {
+  display: flex;
+  height: 8vh;
+  padding: 10px;
+}
+#logo-icon {
+  height: 20px;
+  width: 90px;
+  margin-left: 15px;
+}
+#menu-logo {
+  height: 24px;
+  width: 24px;
+}
+#user-logo {
+  height: 36px;
+}
+.youtube-logo,
+.youtube-user {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.youtube-search {
+  flex: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#search-input {
+  width: 50%;
+  padding: 10px;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+.search-btn {
+  border: 1px solid #ccc;
+  border-left: none;
+  padding: 09px 20px;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  font-size: 16px;
+  background-color: #f8f8f8;
+  cursor: pointer;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.body {
+  display: flex;
+}
+.sidebar > ul {
+  list-style-type: none;
+  padding-left: 35px;
+}
+.sidebar > ul > li {
+  padding: 5px;
+  margin-top: 15px;
+}
+.sidebar > ul > li:hover {
+  background-color: #939393;
+}
+.break-line {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.main-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 10px;
+  width: 100%;
+}
+.main-container-btn-list {
+  display: flex;
+  margin-top: 15px;
+}
+.top-button {
+  padding: 5px 12px;
+  font-size: 14px;
+  margin-right: 18px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+.icon-text {
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.video-list {
+  padding: 10px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.thumbnail {
+  border-radius: 15px;
+  cursor: pointer;
+}
+.thumbnail:hover {
+  border-radius: 0px;
+}
+.video-card-parent {
+  max-width: 325px;
+  border: 1px solid #f4f4f4;
+  padding: 8px;
+  margin: 10px 5px;
+}
+#video-title {
+  font-weight: bold;
+  font-size: 14px;
+  font-family: "Roboto", "Arial", sans-serif;
+}
+#channel-title,
+#upload-duration,
+#video-views {
+  font-size: 14px;
+  font-family: "Roboto", "Arial", sans-serif;
+  padding: 0px;
+  margin: 0px;
+  color: #606060;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#channel-title {
+  font-weight: bolder;
 }
