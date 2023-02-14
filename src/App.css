@@ -25,9 +25,8 @@
 }
 .youtube-search {
   flex: 5;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  margin-left: 300px;
+  margin-top: 20px;
 }
 #search-input {
   width: 50%;
@@ -71,6 +70,7 @@
   flex-direction: column;
   padding: 10px;
   width: 100%;
+  z-index: -1;
 }
 .main-container-btn-list {
   display: flex;
@@ -124,4 +124,61 @@
 
 #channel-title {
   font-weight: bolder;
+}
+.main-video {
+  margin: 5px 40px;
+}
+#video-tile-title {
+  word-break: break-word;
+  font-family: "YouTube Sans", "Roboto", sans-serif;
+  font-size: 2rem;
+  line-height: 1.8rem;
+  font-weight: 600;
+}
+#video-tile-channelName {
+  font-family: "YouTube Sans", "Roboto", sans-serif;
+  font-size: 16px;
+  color: #0f0f0f;
+  font-weight: 700;
+}
+#video-tile-publishat {
+  font-family: "YouTube Sans", "Roboto", sans-serif;
+  font-size: 14px;
+  color: #060606;
+  font-weight: 400;
+  padding-left: 8px;
+  margin: 0px;
+}
+.video-description > p {
+  padding: 0;
+  margin: 0px;
+}
+.video-description {
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 15px;
+  padding: 15px;
+  max-width: 1200px;
+  margin-bottom: 50px;
+  cursor: pointer;
+  word-spacing: 2px;
+}
+.searchSuggestionList > ul {
+  padding: 0px;
+}
+.searchSuggestionList {
+  background-color: #f6f6f6;
+  z-index: 1;
+  position: absolute;
+  box-shadow: 3px 3px #c3c3c3;
+  border-radius: 10px;
+  width: 28%;
+}
+
+.suggestion {
+  padding: 10px;
+  list-style: none;
+  cursor: pointer;
+}
+.suggestion:hover {
+  background-color: #d6d5d5;
 }

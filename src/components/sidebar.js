@@ -12,6 +12,7 @@ import { VscFlame } from "react-icons/vsc";
 import { BsNewspaper, BsTrophy, BsLightbulb } from "react-icons/bs";
 import { GiFilmStrip, GiClothes } from "react-icons/gi";
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 const Sidebar = () => {
   const isMenuOpen = useSelector((store) => store.app.isMenuOpen);
@@ -22,7 +23,7 @@ const Sidebar = () => {
         <li>
           <span className="icon-text">
             <MdHome style={{ paddingRight: "8px" }} />
-            Home
+            <Link to="/"> Home</Link>
           </span>
         </li>
         <li>

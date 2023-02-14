@@ -5,7 +5,6 @@ const VideoCard = ({ data }) => {
   return (
     <div className="video-card-parent">
       <div>
-        {console.log(data)}
         <img
           src={data.snippet.thumbnails.medium.url}
           alt="thumbnail"
