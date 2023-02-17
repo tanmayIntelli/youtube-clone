@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { YOUTUBE_VIDEO_API } from "../utils/constant";
+import Shimmer from "../utils/shimmer";
 import VideoCard from "./videoCard";
 
 const VideoContainer = () => {
@@ -15,16 +16,23 @@ const VideoContainer = () => {
   useEffect(() => {
     getVideosList();
   }, []);
-
-  return (
-    <div className="video-list">
-      {videosList.map((videoData) => (
-        <Link to={"watch?v=" + videoData.id} key={videoData.id}>
-          <VideoCard data={videoData} />
-        </Link>
-      ))}
-    </div>
-  );
+  if(videosList.length<1){
+    return(
+      <div className="video-list">
+      {Array(16).fill("").map(()=><Shimmer />)}
+      </div>
+    )
+  } else {
+    return (
+      <div className="video-list">
+        {videosList.map((videoData) => (
+          <Link to={"watch?v=" + videoData.id} key={videoData.id}>
+            <VideoCard data={videoData} />
+          </Link>
+        ))}
+      </div>
+    );
+  }
 };
 
 export default VideoContainer;

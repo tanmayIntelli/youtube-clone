@@ -96,6 +96,7 @@
 }
 .thumbnail {
   border-radius: 15px;
+  background-color: #939393;
   cursor: pointer;
 }
 .thumbnail:hover {
@@ -203,3 +204,22 @@
 }
 a{text-decoration: none;
 color: #060606;}
+
+.shimmer-video-card-parent {
+  width: 325px;
+  height: 250px;
+  background-color: #e7e7e7;
+  border-radius: 15px;
+  padding: 8px;
+  margin: 10px 5px;
+}
+.shimmer-thumbnail{
+  background-color: #c6c4c4;
+  border-radius: 10px;
+  height: 170px;
+}
+#shimmer-video-title, #shimmer-channel-title{
+  background-color: #c6c4c4;
+  height: 15px;
+  width: 100%;
+}
