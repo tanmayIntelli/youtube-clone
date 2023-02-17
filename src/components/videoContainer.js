@@ -4,7 +4,7 @@ import { YOUTUBE_VIDEO_API } from "../utils/constant";
 import VideoCard from "./videoCard";
 
 const VideoContainer = () => {
-  const [videosList, setVideosList] = useState();
+  const [videosList, setVideosList] = useState([]);
 
   const getVideosList = async () => {
     const json = await fetch(YOUTUBE_VIDEO_API);
@@ -18,9 +18,9 @@ const VideoContainer = () => {
 
   return (
     <div className="video-list">
-      {videosList?.map((videoData) => (
+      {videosList.map((videoData) => (
         <Link to={"watch?v=" + videoData.id} key={videoData.id}>
-          <VideoCard data={videoData} key={videoData.id} />
+          <VideoCard data={videoData} />
         </Link>
       ))}
     </div>

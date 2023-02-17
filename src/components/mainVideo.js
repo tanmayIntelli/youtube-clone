@@ -4,6 +4,7 @@ import { closeSideMenu } from "../utils/appSlice";
 import { useSearchParams } from "react-router-dom";
 import { YOUTUBE_VIDEO_DETAILS } from "../utils/constant";
 import moment from "moment";
+import CommentsContainer from "./commentsContainer";
 
 const MainVideo = () => {
   const dispatch = useDispatch();
@@ -12,7 +13,6 @@ const MainVideo = () => {
   const [searchParam] = useSearchParams();
   const getVideoPlayer = async () => {
     const URL = YOUTUBE_VIDEO_DETAILS(searchParam.get("v"));
-    console.log(URL);
     const json = await fetch(URL);
     const data = await json.json();
     setVideoDetails(data.items);
@@ -64,12 +64,15 @@ const MainVideo = () => {
             <p>
               {showDescription
                 ? videoDetails[0]?.snippet.description
-                : (videoDetails[0]?.snippet.description).substring(0, 350) +
-                  "...Read more"}
+                : (videoDetails[0]?.snippet.description).substring(0, 350) }
+               <b>{!showDescription && "Read more..."}</b>
             </p>
           </div>
         </div>
       )}
+      <div>
+        <CommentsContainer />
+      </div>
     </div>
   );
 };

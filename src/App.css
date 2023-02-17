@@ -70,7 +70,7 @@
   flex-direction: column;
   padding: 10px;
   width: 100%;
-  z-index: -1;
+  
 }
 .main-container-btn-list {
   display: flex;
@@ -167,7 +167,7 @@
 }
 .searchSuggestionList {
   background-color: #f6f6f6;
-  z-index: 1;
+
   position: absolute;
   box-shadow: 3px 3px #c3c3c3;
   border-radius: 10px;
@@ -182,3 +182,24 @@
 .suggestion:hover {
   background-color: #d6d5d5;
 }
+.single-comment{
+  display: flex;
+  margin: 15px 5px;
+  padding: 10px;
+  background-color: #f0efef;
+  border-radius: 10px;
+}
+.comment-content > p{
+  padding: 0;
+  margin: 0;
+}
+.comment-content{
+  padding: 5px;
+  font-size: 14px;
+}
+#comment-user{
+  font-weight: bold;
+  padding-bottom: 2px;
+}
+a{text-decoration: none;
+color: #060606;}
